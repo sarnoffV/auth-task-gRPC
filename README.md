@@ -1,3 +1,10 @@
+# PROJET SOA - gRPC- Gestion tâches
+
+## - M2-GB 2116 RAMANANDAFY Tolotry Ny Avo Lafatra Manovosoa 
+## - M2-GB 2125 ANDRIAMANAMPY Fenomanantsoa Giovanni
+## - M2-GB 2192 RANDRIANARISOA Koloina Amanda 
+## - M2-GB 2204 VOLATIANA Sarnoff Carissa
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
