@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package task;
+
+service TaskService {
+    rpc CreateTask (CreateTaskDto) returns (Task) ;
+    rpc findOneTask (findOneRequest) returns (Task) ;
+    rpc findAllTask (findAllRequest) returns (Tasks);
+    rpc UpdateTask (UpdateTaskDto) returns (Task);
+    rpc RemoveTask (findOneRequest) returns (Task);
+}
+
+message CreateTaskDto {
+    string title = 1;
+    string description = 2;
+    bool status = 3;
+    int32 userId = 4;
+}
+
+message Task {
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+    bool status = 4;
+    int32 userId = 5;
+}
+
+message UpdateTaskDto {
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+    bool status = 4;
+    int32 userId = 5;
+    string token =6;
+}
+
+message findOneRequest {
+    int32 id = 1;
+    string token =2;
+}
+
+message findAllRequest {
+    int32 userdId = 1;
+    string token = 2;
+}
+
+message Tasks {
+    repeated Task tasks =1;
+}

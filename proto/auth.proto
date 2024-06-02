@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package auth;
+
+service AuthService {
+  rpc Register (CreateUserDto) returns (User);
+  rpc Login (CreateUserDto) returns (LoginResponse);
+  rpc find(findRequest) returns (User);
+  rpc findAll(Empty) returns (stream User);
+  rpc ValidateToken (LoginResponse) returns (ValidateTokenResponse);
+}
+
+message findRequest {
+    int32 id =1;
+}
+
+message Empty{}
+
+message CreateUserDto {
+  string username = 1;
+  string password = 2;
+}
+
+message User {
+  int32 id = 1;
+  string username = 2;
+  string password = 3;
+}
+
+message LoginResponse {
+  string token = 1;
+}
+
+message ValidateTokenResponse {
+  bool isValid = 1;
+  string userId = 2;
+}
+
+
